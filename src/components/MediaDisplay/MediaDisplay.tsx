@@ -1,7 +1,8 @@
 import { Image } from "react-bootstrap";
 import "./MediaDisplay.scss";
 import { useState } from "react";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
+import YouTubePlayer from "react-player/youtube";
 
 type MediaDisplayType = {
     featuredImage: string,
@@ -24,7 +25,7 @@ function MediaDisplay(props: MediaDisplayType) {
             {
                 videoSrc && !hasVideoLoadingErr ?
                     <div className="player-wrapper">
-                        <ReactPlayer
+                        <YouTubePlayer
                             className={"react-player"}
                             width={"100%"}
                             height={"100%"}
